@@ -1,0 +1,29 @@
+//--------------------------------------------------------------
+// Header
+//--------------------------------------------------------------
+
+.site-header {
+	background-color: map_get($primary-colors, 'purple');
+	border-bottom: 4px solid map_get($primary-colors, 'green');
+
+	.wrap {
+
+		.site-branding {
+			@include span-columns(4);
+
+			.site-title {
+				font-size: rem(26);
+				font-family: $font-heading;
+				@include margin (0 null 0 null);
+				a {
+					text-decoration: none
+				};
+			}
+
+			.site-description {
+				font-size: rem(24);
+				margin: 0 0 rem(24) 0;
+			}
+		}
+	}
+}
