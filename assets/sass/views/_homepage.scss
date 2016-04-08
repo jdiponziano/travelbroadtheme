@@ -65,10 +65,6 @@
 
   .wrap > div {
     @include clearfix;
-
-    & > div {
-      text-align: center;
-    }
   }
 
   a.blue-cta {

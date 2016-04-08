@@ -21,7 +21,7 @@ get_header(); ?>
         <div class="intro-post">
           <h1>Hi I am Kae Lani</h1>
           <p>
-            Kick up litter stare at the wall, play with food and get confused by dust. Climb leg sit by the fire or attack dog, run away and pretend to be victim yet climb a tree, wait for a fireman jump to fireman then scratch his face. Sit on the laptop chew foot chase red laser dot lick butt, yet white cat.
+            Kick up litter stare at the wall, play with food and get confused by dust. Climb leg sit by the fire or attack dog, run away and pretend to be victim yet climb a tree, wait for a fireman jump to fireman then scratch his face. Sit on the laptop chew foot chase red laser dot lick butt, yet white cat white cat sleeps on a black shirt paw at your fat belly unwrap toilet paper. Run outside as soon as door open you call this cat food? 
           </p>
           <a class="alignright" href="/about.html">About Me</a>
         </div>
