@@ -23,10 +23,10 @@
 }
 
 .site-content {
-	margin: rem(20) auto;
+	margin: 0 auto rem(20);
 
 	@include media($desktop) {
-		margin: rem(40) auto rem(60);
+		margin: 0 auto rem(60);
 	}
 }
 

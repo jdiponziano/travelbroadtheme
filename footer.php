@@ -15,7 +15,18 @@
 
 	<footer class="site-footer">
 		<div class="wrap">
+			<div class="footer-widgets">
+				<div class="footer-widget-left">
 
+				</div>
+				<div class="footer-widget-center">
+
+				</div>
+				<div class="footer-widget-right">
+
+				</div>
+
+			</div>
 			<div class="site-info">
 				<?php atravelbroad_do_copyright_text(); ?>
 			</div>

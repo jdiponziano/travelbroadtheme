@@ -1,0 +1,50 @@
+.event-listing {
+  ul {
+    margin-left: 0;
+    padding-left: 0;
+
+    .event {
+      list-style-type: none;
+      border-bottom: 1px solid $color-background-hr;
+      @include clearfix;
+      @include padding (20px null);
+
+      &:first-child {padding-top: 0;}
+      &:last-child {border-bottom: none;}
+
+      .event-date {
+        @include span-columns(3);
+
+        .event-month {
+          background-color: $color-silver;
+          text-align: center;
+        }
+
+        .event-day {
+          background-color: map_get($primary-colors, 'white');
+          text-align: center;
+        }
+      }
+
+      .event-details {
+        @include span-columns(9);
+        padding-left: 5%;
+
+        .event-name {
+          h3 {
+            @include margin (0 null);
+          }
+        }
+
+        .location,
+        .time {
+          display: inline;
+        }
+
+        .event-btn {
+          @include btn-event;
+        }
+      }
+    }
+  }
+}

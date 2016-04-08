@@ -8,43 +8,53 @@ input,
 select,
 textarea {
 	color: $color-text-main;
-	font-family: $font-sans;
+	font-family: $font-body;
 	line-height: $line-height-body;
+	font-size: rem(18px);
 }
 
 // Headers
 
 h1,
 .h1 {
-
+ font-family: $font-heading;
+ color: map_get($primary-colors, 'green');
 }
 
 h2,
 .h2 {
-
+	font-family: $font-heading;
+	color: map_get($primary-colors, 'green');
 }
 
 h3,
 .h3 {
-
+	font-family: $font-heading;
+	color: map_get($primary-colors, 'green');
 }
 
 h4,
 .h4 {
-
+	font-family: $font-heading;
+	color: map_get($primary-colors, 'green');
 }
 
 h5,
 .h5 {
-
+	font-family: $font-heading;
+	color: map_get($primary-colors, 'green');
 }
 
 h6,
 .h6 {
-
+	font-family: $font-heading;
+	color: map_get($primary-colors, 'green');
 }
 
 // Copy
+a {
+	text-decoration: none;
+}
 
 p {
 	margin: 0 0 rem(24) 0;

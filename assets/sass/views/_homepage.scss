@@ -1,3 +1,77 @@
 //--------------------------------------------------------------
 // Homepage Template
 //--------------------------------------------------------------
+
+.home {
+  h2 {
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .event-listing {
+    @include span-columns(4);
+
+  }
+
+  .event-video {
+    @include span-columns(8);
+  }
+
+  .home-cta {
+    text-align: center;
+    @include padding (25px null);
+  }
+}
+.home-hero {
+  background-color: blue;
+  background-image:url('/wp-content/uploads/2016/04/sunset-plane.png');
+  background-size: cover;
+  background-position: 30% 50%;
+  min-height: 452px;
+  position: relative;
+
+  .intro-block {
+    @include span-columns(12);
+    background-color: map_get($primary-colors, 'blue');
+    color: map_get($primary-colors, 'light-yellow');
+    position: relative;
+    @include margin (331px null -190px);
+    @include padding(25px);
+
+    .profile-pic {
+      @include span-columns(4);
+      border-radius: 200px;
+      border: 7px solid map_get($primary-colors, 'light-yellow');
+    }
+
+    .intro-post {
+      @include span-columns(8);
+
+      h1 {
+        margin-top: 0;
+        color: map_get($primary-colors, 'light-yellow');
+      }
+
+      a {
+        @include btn-purple;
+      }
+    }
+  }
+}
+
+.home-events {
+  @include padding(200px null 2em);
+  background-image: url('/wp-content/uploads/2016/04/confectionary.png');
+
+  .wrap > div {
+    @include clearfix;
+
+    & > div {
+      text-align: center;
+    }
+  }
+
+  a.blue-cta {
+    @include btn-blue;
+  }
+}
