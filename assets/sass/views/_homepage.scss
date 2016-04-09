@@ -66,7 +66,9 @@
   .wrap > div {
     @include clearfix;
   }
+}
 
+.home-cta {
   a.blue-cta {
     @include btn-blue;
   }
@@ -94,8 +96,8 @@
 
   .card-image {
     background-color: $card-image-hover-color;
-    height: 150px;
-    max-height: 150px;
+    height: 200px;
+    max-height: 200px;
     overflow: hidden;
 
     img {
@@ -143,4 +145,27 @@
     }
   }
 }
+}
+
+.home-photos {
+  text-align: center;
+  background: linear-gradient(rgba(0,0,0, .5), rgba(0,0,0, .5)),
+              url($photo-bg) no-repeat center;
+  background-size: cover;
+  color: map_get($primary-colors, 'white');
+  position: relative;
+  @include padding(5em null 8em);
+
+  .wrap {
+    @include clearfix;
+
+    h2 {
+      color: map_get($primary-colors, 'white');
+      font-size: em(48px);
+    }
+
+    p {
+      font-size: em(26px);
+    }
+  }
 }

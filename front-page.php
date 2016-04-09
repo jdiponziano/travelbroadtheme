@@ -88,63 +88,62 @@ get_header(); ?>
           </div>
         </section>
         <section class="home-blog">
-          <h2>Latest on the Blog</h2>
-          <div class="cards">
-            <div class="card">
-              <div class="card-image">
-                <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png" alt="">
+          <div class="wrap">
+            <h2>Latest on the Blog</h2>
+            <div class="cards">
+              <div class="card">
+                <div class="card-image">
+                  <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png" alt="">
+                </div>
+                <div class="card-header">
+                  First Card
+                </div>
+                <div class="card-copy">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, officiis sunt neque facilis culpa molestiae necessitatibus delectus veniam provident.</p>
+                </div>
               </div>
-              <div class="card-header">
-                First Card
-              </div>
-              <div class="card-copy">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, officiis sunt neque facilis culpa molestiae necessitatibus delectus veniam provident.</p>
-              </div>
-            </div>
 
-            <div class="card">
-              <div class="card-image">
-                <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains-3.png" alt="">
+              <div class="card">
+                <div class="card-image">
+                  <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains-3.png" alt="">
+                </div>
+                <div class="card-header">
+                  The Last Card
+                </div>
+                <div class="card-copy">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
               </div>
-              <div class="card-header">
-                The Last Card
-              </div>
-              <div class="card-copy">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              </div>
-            </div>
 
-            <div class="card">
-              <div class="card-image">
-                <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains-3.png" alt="">
-              </div>
-              <div class="card-header">
-                The Last Card
-              </div>
-              <div class="card-copy">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+              <div class="card">
+                <div class="card-image">
+                  <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains-3.png" alt="">
+                </div>
+                <div class="card-header">
+                  The Last Card
+                </div>
+                <div class="card-copy">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
               </div>
             </div>
-            <div class="card">
-              <div class="card-image">
-                <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains-3.png" alt="">
-              </div>
-              <div class="card-header">
-                The Last Card
-              </div>
-              <div class="card-copy">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              </div>
+            <div class="home-cta">
+              <a class="blue-cta" href="/blog">Read the Blog</a>
             </div>
           </div>
-          <a href="#">Visit Blog</a>
         </section>
         <section class="home-photos">
-          <h2>Photography</h2>
-          <p>
-            Check out the latest photography
-          </p>
-          <a href="#">View Gallery</a>
+          	<div class="wrap">
+          		<div class="photos-copy">
+          			<h2>Photography</h2>
+                <p>
+                  Check out the latest photography
+                </p>
+                <div class="home-cta">
+                  <a class="blue-cta" href="/blog">View Gallery</a>
+                </div>
+          		</div>
+          	</div>
         </section>
 
 			</main><!-- #main -->
