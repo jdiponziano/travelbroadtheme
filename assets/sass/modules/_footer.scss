@@ -1,3 +1,45 @@
 //--------------------------------------------------------------
 // Footer
 //--------------------------------------------------------------
+
+.footer-widgets {
+  background-color: map_get($primary-colors, 'blue');
+  @include padding (3em null);
+  color: map_get($primary-colors, 'white');
+
+  .footer-widget-left,
+  .footer-widget-right,
+  .footer-widget-center {
+    @include span-columns(4);
+
+    h4 {
+      color: map_get($primary-colors, 'white');
+      border-bottom: 2px solid map_get($primary-colors, 'white');
+      font-size: em(20px);
+    }
+  }
+}
+
+footer {
+  background-color: map_get($primary-colors, 'purple');
+
+  .wrap {
+    @include padding(.5em null);
+    color: map_get($primary-colors, 'light-yellow');
+
+    .site-info {
+      @include span-columns(4);
+    }
+
+    .footer-menu {
+      @include span-columns(8);
+      ul {
+        @include list-reset;
+        li {
+          display: inline-block;
+          margin-right: 1em;
+        }
+      }
+    }
+  }
+}
