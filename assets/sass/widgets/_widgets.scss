@@ -4,7 +4,19 @@
 
 .widget {
 	margin: 0 0 rem(24);
+	background-color: $color-gallery;
+	@include padding(1em);
 
+	h3 {
+		margin-top: 0;
+		color: map_get($primary-colors, 'purple');
+	}
+
+	p,
+	a {
+		color: map_get($primary-colors, 'blue');
+	}
+	
 	// Make sure select elements fit in widgets
 	select {
 		max-width: 100%;
