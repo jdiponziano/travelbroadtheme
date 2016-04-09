@@ -89,3 +89,19 @@ $color-nav-link: $color-light-yellow;
 $color-link: $color-blue;
 $color-link-visited: $color-blue;
 $color-link-hover: $color-blue;
+
+// Blog cards
+$base-border-color: $color-alto !default;
+$base-border-radius: 3px !default;
+$base-background-color: white !default;
+$base-spacing: 1.5em !default;
+$action-color: #477DCA !default;
+$dark-gray: #333 !default;
+$base-font-color: $dark-gray !default;
+$card-border-color: $base-border-color;
+$card-border: 1px solid $card-border-color;
+$card-background: lighten($card-border-color, 10%);
+$card-header-background: $card-background;
+$card-margin: 1em;
+$card-image-hover-opacity: 0.7;
+$card-image-hover-color: #F8F2B4;
