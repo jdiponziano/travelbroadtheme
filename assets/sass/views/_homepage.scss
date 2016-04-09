@@ -24,7 +24,7 @@
 }
 .home-hero {
   background-color: blue;
-  background-image:url('/wp-content/uploads/2016/04/sunset-plane.png');
+  background-image:url($home-bg);
   background-size: cover;
   background-position: 30% 50%;
   min-height: 452px;
