@@ -28,7 +28,7 @@ get_header(); ?>
       </div>
     </div>
   </section>
-		<div class="content-area"><!--primary class was here-->
+		<div class="content-area">
 			<main id="main" class="site-main" role="main">
         <section class="home-events">
           <div class="wrap">
@@ -148,8 +148,6 @@ get_header(); ?>
 
 			</main><!-- #main -->
 		</div><!-- .primary -->
-
-		<!-- <?php get_sidebar(); ?> -->
 
 	</div><!-- .wrap -->
 </article>

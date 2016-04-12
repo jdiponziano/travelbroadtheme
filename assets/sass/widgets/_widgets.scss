@@ -16,7 +16,7 @@
 	a {
 		color: map_get($primary-colors, 'blue');
 	}
-	
+
 	// Make sure select elements fit in widgets
 	select {
 		max-width: 100%;
@@ -27,4 +27,21 @@
 
 .widget_search .search-submit {
 	display: none;
+}
+
+//Footer widget
+.footer-widgets {
+	.widget {
+		background: transparent;
+		color: map_get($primary-colors, 'white');
+
+		h3 {
+			color: map_get($primary-colors, 'white');
+			border-bottom: 1px solid map_get($primary-colors, 'white');
+		}
+
+		a {
+			color: map_get($primary-colors, 'white');
+		}
+	}
 }
