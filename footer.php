@@ -32,9 +32,11 @@
 			</div>
 			<div class="footer-menu">
 				<ul class="alignright">
-					<li>Advertise</li>
-					<li>Guest Post</li>
-					<li>Contact</li>
+					<?php
+						wp_nav_menu( array(
+							'theme_location' => 'footer',
+						) );
+					?>
 				</ul>
 			</div>
 		</div><!-- .wrap -->
