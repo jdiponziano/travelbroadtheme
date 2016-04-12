@@ -95,9 +95,11 @@ function atravelbroad_widgets_init() {
 
 	// Define sidebars
 	$sidebars = array(
-		'sidebar-1'  => esc_html__( 'Sidebar 1', 'atravelbroad' ),
-	//	'sidebar-2'  => esc_html__( 'Sidebar 2', 'atravelbroad' ),
-	//	'sidebar-3'  => esc_html__( 'Sidebar 3', 'atravelbroad' ),
+		'sidebar-blog'  => esc_html__( 'Blog', 'atravelbroad' ),
+		'sidebar-page'  => esc_html__( 'Page', 'atravelbroad' ),
+		'sidebar-footer-1'  => esc_html__( 'Footer Left', 'atravelbroad' ),
+		'sidebar-footer-2'  => esc_html__( 'Footer Center', 'atravelbroad' ),
+		'sidebar-footer-3'  => esc_html__( 'Footer Right', 'atravelbroad' ),
 	);
 
 	// Loop through each sidebar and register

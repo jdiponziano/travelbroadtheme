@@ -10,8 +10,8 @@
 get_header(); ?>
 
 	<div class="wrap">
-		<?php get_sidebar(); ?>
-		
+		<?php get_sidebar('page'); ?>
+
 		<div class="primary content-area">
 			<main id="main" class="site-main" role="main">
 
