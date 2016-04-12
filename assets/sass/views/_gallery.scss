@@ -1,0 +1,32 @@
+.gallery-item {
+  @include span-columns(4);
+
+  .gallery-feature {
+    max-height: 200px;
+  }
+
+  .gallery-title {
+    margin-top: 0;
+  }
+}
+
+.gallery-photos {
+  @include clearfix;
+  @include span-columns(8);
+}
+
+.gallery-details {
+  @include clearfix;
+  @include span-columns(4);
+}
+
+.gallery-name {
+  h1 {
+    display: inline-block;
+  }
+  a {
+    color: map_get($primary-colors, 'blue');
+    background-color: $color-alto;
+    padding: 5px;
+  }
+}
