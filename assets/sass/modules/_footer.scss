@@ -11,7 +11,10 @@
   .footer-widget-left,
   .footer-widget-right,
   .footer-widget-center {
-    @include span-columns(4);
+    @include span-columns(12);
+    @include media($tablet-landscape) {
+      @include span-columns(4);
+    }
 
     h4 {
       color: map_get($primary-colors, 'white');
