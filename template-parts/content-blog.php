@@ -20,7 +20,11 @@
 
 		if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
-			<?php atravelbroad_posted_on(); ?>
+			<a href="<?php the_author_link();?>">
+				<b>By <?php the_author(); ?></b>
+			</a>
+			<i class="fa fa-comments-o" aria-hidden="true"></i><a href="<?php comments_link(); ?> "><?php comments_number('0 comments'); ?></a>
+			<i class="fa fa-clock-o" aria-hidden="true"></i><?php atravelbroad_posted_on(); ?>
 		</div><!-- .entry-meta -->
 		<?php
 		endif; ?>
@@ -31,11 +35,12 @@
 		if ( has_post_thumbnail() ) {
 				the_post_thumbnail();
 		}
-			the_content( sprintf(
+			the_excerpt( sprintf(
 				/* translators: %s: Name of current post. */
 				wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'atravelbroad' ), array( 'span' => array( 'class' => array() ) ) ),
 				the_title( '<span class="screen-reader-text">"', '"</span>', false )
 			) );
+
 
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'atravelbroad' ),

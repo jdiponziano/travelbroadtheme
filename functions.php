@@ -118,7 +118,6 @@ function atravelbroad_widgets_init() {
 
 }
 add_action( 'widgets_init', 'atravelbroad_widgets_init' );
-
 /**
  * Implement the Custom Header feature.
  */

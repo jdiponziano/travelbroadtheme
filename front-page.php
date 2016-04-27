@@ -19,11 +19,15 @@ get_header(); ?>
       <div class="intro-block">
         <img class="profile-pic" src="/wp-content/uploads/2016/04/kae-lani.jpg" alt="Kae Lani" />
         <div class="intro-post">
-          <h1>Hi I am Kae Lani</h1>
+          <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
           <p>
-            Kick up litter stare at the wall, play with food and get confused by dust. Climb leg sit by the fire or attack dog, run away and pretend to be victim yet climb a tree, wait for a fireman jump to fireman then scratch his face. Sit on the laptop chew foot chase red laser dot lick butt, yet white cat white cat sleeps on a black shirt paw at your fat belly unwrap toilet paper. Run outside as soon as door open you call this cat food?
+            <?php
+      				while ( have_posts() ) : the_post();
+                the_content();
+              endwhile; // End of the loop.
+    				?>
           </p>
-          <a class="alignright" href="/about.html">About Me</a>
+          <a class="alignright" href="/about">About Me</a>
         </div>
       </div>
     </div>
@@ -145,10 +149,8 @@ get_header(); ?>
           		</div>
           	</div>
         </section>
-
 			</main><!-- #main -->
 		</div><!-- .primary -->
-
 	</div><!-- .wrap -->
 </article>
 <?php get_footer(); ?>
