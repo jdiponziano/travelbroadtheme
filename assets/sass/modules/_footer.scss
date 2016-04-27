@@ -30,15 +30,28 @@ footer.site-footer {
   .wrap {
     @include padding(.5em null);
     color: map_get($primary-colors, 'light-yellow');
+    text-align: center;
 
     .site-info {
-      @include span-columns(4);
+      @include span-columns(12);
+      @include media($tablet-landscape) {
+        @include span-columns(4);
+        text-align: left;
+      }
     }
 
     .footer-menu {
-      @include span-columns(8);
+      @include span-columns(12);
+      @include media($tablet-landscape) {
+        @include span-columns(8);
+        text-align: center;
+        float: right;
+      }
       ul {
         @include list-reset;
+        @include media($tablet-landscape) {
+          float: right;
+        }
         li {
           display: inline-block;
           margin-right: 1em;

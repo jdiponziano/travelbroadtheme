@@ -31,7 +31,7 @@
 				<?php atravelbroad_do_copyright_text(); ?>
 			</div>
 			<div class="footer-menu">
-				<ul class="alignright">
+				<ul>
 					<?php
 						wp_nav_menu( array(
 							'theme_location' => 'footer',
