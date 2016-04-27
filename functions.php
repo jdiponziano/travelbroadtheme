@@ -118,6 +118,15 @@ function atravelbroad_widgets_init() {
 
 }
 add_action( 'widgets_init', 'atravelbroad_widgets_init' );
+
+/**
+ * Change excerpt length
+ */
+function atravelbroad_excerpt_length($length) {
+    return 100;
+}
+add_filter('excerpt_length', 'atravelbroad_excerpt_length');
+
 /**
  * Implement the Custom Header feature.
  */
