@@ -3,6 +3,19 @@
 //--------------------------------------------------------------
 
 // Posts and pages
+a {
+	color: map-get($primary-colors, 'blue');
+
+	&:visited {
+		color: map-get($primary-colors, 'blue');
+	}
+
+	&:hover,
+	&:focus,
+	&:active {
+		color: map-get($primary-colors, 'blue');
+	}
+}
 
 .entry-title {
 	font-size: rem(36);

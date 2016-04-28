@@ -3,7 +3,8 @@
 //--------------------------------------------------------------
 
 // Links
-a {
+.site-header a,
+#menu-footer a {
 	color: $color-nav-link;
 
 	&:visited {
