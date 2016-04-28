@@ -33,6 +33,9 @@
         .event-name {
           h3 {
             @include margin (0 null);
+            a {
+              color: map-get($primary-colors, 'green');
+            }
           }
         }
 

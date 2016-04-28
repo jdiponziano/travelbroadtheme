@@ -53,7 +53,7 @@ get_header(); ?>
                 		 ?>
 
                 		<?php
-                		if($query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(3); ?>
+                		if($query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
                 			<li class="event">
                         <div class="event-date">
                           <div class="event-month"><?php the_field('date'); ?></div>
@@ -63,7 +63,9 @@ get_header(); ?>
                           <div class="event-name"><h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3></div>
                           <div class="location"><?php the_field('state'); ?></div>
                           <div class="time">@ <?php the_field('time'); ?></div>
-                          <div class="event-btn"><a href="<?php the_permalink(); ?>">Event Details</a></div>
+                          <a href="<?php the_permalink(); ?>">
+                            <div class="event-btn">Event Details</div>
+                          </a>
                         </div>
                 			</li>
                 		<?php endwhile; endif; wp_reset_postdata(); ?>
@@ -86,41 +88,32 @@ get_header(); ?>
           <div class="wrap">
             <h2>Latest on the Blog</h2>
             <div class="cards">
-              <div class="card">
-                <div class="card-image">
-                  <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png" alt="">
-                </div>
-                <div class="card-header">
-                  First Card
-                </div>
-                <div class="card-copy">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, officiis sunt neque facilis culpa molestiae necessitatibus delectus veniam provident.</p>
-                </div>
-              </div>
 
-              <div class="card">
-                <div class="card-image">
-                  <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains-3.png" alt="">
-                </div>
-                <div class="card-header">
-                  The Last Card
-                </div>
-                <div class="card-copy">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                </div>
-              </div>
+              <?php
+              $args = array (
+                'post_type'=>'post',
+                'posts_per_page' => 3,
+                'order' => 'ASC',
+              );
 
+              $query = new WP_Query($args);
+             ?>
+
+            <?php
+            if($query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
               <div class="card">
                 <div class="card-image">
-                  <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains-3.png" alt="">
+                  <img src="<?php the_post_thumbnail_url(); ?>" alt="">
                 </div>
                 <div class="card-header">
-                  The Last Card
+                  <?php the_title(); ?>
                 </div>
                 <div class="card-copy">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                  <p><?php the_excerpt(); ?></p>
                 </div>
               </div>
+            <?php endwhile; endif; wp_reset_postdata(); ?>
+
             </div>
             <div class="home-cta">
               <a class="blue-cta" href="/blog">Read the Blog</a>
@@ -135,7 +128,7 @@ get_header(); ?>
                   Check out the latest photography
                 </p>
                 <div class="home-cta">
-                  <a class="blue-cta" href="/blog">View Gallery</a>
+                  <a class="blue-cta" href="/gallery">View Gallery</a>
                 </div>
           		</div>
           	</div>
