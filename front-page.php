@@ -40,42 +40,33 @@ get_header(); ?>
               <div>
                 <div class="event-listing">
                   <ul>
-                    <li class="event">
-                      <div class="event-date">
-                        <div class="event-month">Dec</div>
-                        <div class="event-day">12</div>
-                      </div>
-                      <div class="event-details">
-                        <div class="event-name"><h3>Cool event</h3></div>
-                        <div class="location">NY</div>
-                        <div class="time">@ 10:30am</div>
-                        <div class="event-btn"><a href="#">Event Details</a></div>
-                      </div>
-                    </li>
-                    <li class="event">
-                      <div class="event-date">
-                        <div class="event-month">Dec</div>
-                        <div class="event-day">12</div>
-                      </div>
-                      <div class="event-details">
-                        <div class="event-name"><h3>Cool event</h3></div>
-                        <div class="location">NY</div>
-                        <div class="time">@ 10:30am</div>
-                        <div class="event-btn"><a href="#">Event Details</a></div>
-                      </div>
-                    </li>
-                    <li class="event">
-                      <div class="event-date">
-                        <div class="event-month">Dec</div>
-                        <div class="event-day">12</div>
-                      </div>
-                      <div class="event-details">
-                        <div class="event-name"><h3>Cool event</h3></div>
-                        <div class="location">NY</div>
-                        <div class="time">@ 10:30am</div>
-                        <div class="event-btn"><a href="#">Event Details</a></div>
-                      </div>
-                    </li>
+                    <?php
+                			$args = array (
+                				'post_type'=>'upcoming-events',
+                        'posts_per_page' => 3,
+                        'order' => 'ASC',
+                        'orderby' => 'meta_value',
+                        'meta_key' => 'date'
+                			);
+
+                			$query = new WP_Query($args);
+                		 ?>
+
+                		<?php
+                		if($query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(3); ?>
+                			<li class="event">
+                        <div class="event-date">
+                          <div class="event-month"><?php the_field('date'); ?></div>
+                          <div class="event-day">12</div>
+                        </div>
+                        <div class="event-details">
+                          <div class="event-name"><h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3></div>
+                          <div class="location"><?php the_field('state'); ?></div>
+                          <div class="time">@ <?php the_field('time'); ?></div>
+                          <div class="event-btn"><a href="<?php the_permalink(); ?>">Event Details</a></div>
+                        </div>
+                			</li>
+                		<?php endwhile; endif; wp_reset_postdata(); ?>
                   </ul>
                 </div>
               <div class="event-video">
