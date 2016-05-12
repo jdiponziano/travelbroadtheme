@@ -39,38 +39,43 @@ get_header(); ?>
               <h2><i class="fa fa-plane"></i>Upcoming Events<i class="fa fa-plane"></i></h2>
               <div>
                 <div class="event-listing">
-                  <ul>
-                    <?php
-                			$args = array (
-                				'post_type'=>'upcoming-events',
-                        'posts_per_page' => 3,
-                        'order' => 'ASC',
-                        'orderby' => 'meta_value',
-                        'meta_key' => 'date'
-                			);
+          				<ul>
+          					<?php
+          						$args = array (
+          							'post_type'=>'upcoming-events',
+          							'posts_per_page' => 3,
+          							'order' => 'ASC',
+          							'orderby' => 'meta_value',
+          							'meta_key' => 'date'
+          						);
 
-                			$query = new WP_Query($args);
-                		 ?>
+          						$query = new WP_Query($args);
+          					 ?>
 
-                		<?php
-                		if($query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
-                			<li class="event">
-                        <div class="event-date">
-                          <div class="event-month"><?php the_field('date'); ?></div>
-                          <div class="event-day">12</div>
-                        </div>
-                        <div class="event-details">
-                          <div class="event-name"><h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3></div>
-                          <div class="location"><?php the_field('state'); ?></div>
-                          <div class="time">@ <?php the_field('time'); ?></div>
-                          <a href="<?php the_permalink(); ?>">
-                            <div class="event-btn">Event Details</div>
-                          </a>
-                        </div>
-                			</li>
-                		<?php endwhile; endif; wp_reset_postdata(); ?>
-                  </ul>
-                </div>
+          					<?php
+          					if($query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
+          						<li class="event">
+          							<div class="event-date">
+          								<div class="event-month">
+          									<?php
+          									$date_str = get_field('date');
+          									echo date('M', $date_str);
+          									?>
+          								</div>
+          								<div class="event-day">12</div>
+          							</div>
+          							<div class="event-details">
+          								<div class="event-name"><h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3></div>
+          								<div class="location"><?php the_field('state'); ?></div>
+          								<div class="time">@ <?php the_field('time'); ?></div>
+          								<a href="<?php the_permalink(); ?>">
+          									<div class="event-btn">Event Details</div>
+          								</a>
+          							</div>
+          						</li>
+          					<?php endwhile; endif; wp_reset_postdata(); ?>
+          				</ul>
+          			</div>
               <div class="event-video">
                 <div class="video">
                   <div class="video-wrapper">
