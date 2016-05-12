@@ -1,17 +1,30 @@
 .page-template-page-events {
   .event-intro {
     @include row();
+    margin-bottom: em(40px);
+    @include padding(10px 0 10px 7px);
     .event-featured-video {
       @include span-columns(6);
+      .video {
+        box-shadow: -7px 7px map-get($primary-colors, 'blue');;
+      }
     }
     .event-featured-content {
       @include span-columns(6);
+      a {
+        float: right;
+      }
+      h2 {
+        margin-top: 0;
+      }
     }
   }
   .event-content {
     @include row();
     .event-listing {
       @include span-columns(4);
+      @include pad();
+      background-color: $color-gallery;
     }
     .video-archive {
       @include span-columns(8);

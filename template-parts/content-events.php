@@ -17,10 +17,15 @@
 	<div class="entry-content">
 		<div class="event-intro">
 			<div class="event-featured-video">
-				video
+				<div class="video">
+					<div class="video-wrapper">
+							<iframe src="https://www.youtube.com/embed/PU5QCoYbw-A" frameborder="0" allowfullscreen></iframe>
+					</div>
+				</div>
 			</div>
 			<div class="event-featured-content">
 				<?php the_content();?>
+				<a class="blue-cta" href="#">Book me</a>
 			</div>
 		</div>
 		<div class="event-content">
@@ -29,7 +34,7 @@
 					<?php
 						$args = array (
 							'post_type'=>'upcoming-events',
-							'posts_per_page' => 3,
+							'posts_per_page' => 20,
 							'order' => 'ASC',
 							'orderby' => 'meta_value',
 							'meta_key' => 'date'
