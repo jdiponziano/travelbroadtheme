@@ -152,27 +152,15 @@ msgstr ""
 msgid "Tagged %1$s"
 msgstr ""
 
-#: inc/template-tags.php:64
-msgid "Leave a comment"
-msgstr ""
-
-#: inc/template-tags.php:64
-msgid "1 Comment"
-msgstr ""
-
-#: inc/template-tags.php:64
-msgid "% Comments"
-msgstr ""
-
-#: inc/template-tags.php:71, template-parts/content-gallery.php:43, template-parts/content-page.php:33, template-parts/content-photos.php:41
+#: inc/template-tags.php:65, template-parts/content-events.php:59, template-parts/content-gallery.php:43, template-parts/content-page.php:33, template-parts/content-photos.php:41
 msgid "Edit %s"
 msgstr ""
 
-#: inc/template-tags.php:140
+#: inc/template-tags.php:134
 msgid "Please define default parameters in the form of an array."
 msgstr ""
 
-#: inc/template-tags.php:145
+#: inc/template-tags.php:139
 msgid "Please define an SVG icon filename."
 msgstr ""
 
@@ -193,11 +181,11 @@ msgstr ""
 msgid "Submit"
 msgstr ""
 
-#: template-parts/content-blog.php:39, template-parts/content.php:36
+#: template-parts/content-blog.php:40, template-parts/content.php:36
 msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: template-parts/content-blog.php:44, template-parts/content-page.php:22, template-parts/content.php:41
+#: template-parts/content-blog.php:46, template-parts/content-page.php:22, template-parts/content.php:41
 msgid "Pages:"
 msgstr ""
 

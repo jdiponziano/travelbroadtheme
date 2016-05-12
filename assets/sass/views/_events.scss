@@ -1,0 +1,20 @@
+.page-template-page-events {
+  .event-intro {
+    @include row(block);
+    .event-featured-video {
+      @include span-columns(6);
+    }
+    .event-featured-content {
+      @include span-columns(6);
+    }
+  }
+  .event-content {
+    @include row(block);
+    .event-listing {
+      @include span-columns(4);
+    }
+    .video-archive {
+      @include span-columns(8);
+    }
+  }
+}
