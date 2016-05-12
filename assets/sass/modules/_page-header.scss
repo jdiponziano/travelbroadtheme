@@ -1,0 +1,20 @@
+.page {
+  .entry-header {
+    background-image: url($home-bg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: em(150px);
+    @include padding(4em null 1em);
+    .title-bg {
+      background-color: $color-blue-transparent;
+      h1 {
+        color: map-get($primary-colors, 'white');
+        font-size: 5em;
+        margin-top: -50px;
+        margin-bottom: -45px;
+        font-weight: normal;
+      }
+    }
+  }
+}

@@ -11,71 +11,79 @@
 
 <article <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+
+		<div class="title-bg">
+			<div class="wrap">
+				<?php the_title( '<h1 class="entry-title alignright">', '</h1>' ); ?>
+			</div>
+		</div>
+
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
-		<div class="event-intro">
-			<div class="event-featured-video">
-				<div class="video">
-					<div class="video-wrapper">
-							<iframe src="https://www.youtube.com/embed/PU5QCoYbw-A" frameborder="0" allowfullscreen></iframe>
+		<div class="wrap">
+			<div class="event-intro">
+				<div class="event-featured-video">
+					<div class="video">
+						<div class="video-wrapper">
+								<iframe src="https://www.youtube.com/embed/PU5QCoYbw-A" frameborder="0" allowfullscreen></iframe>
+						</div>
 					</div>
 				</div>
+				<div class="event-featured-content">
+					<?php the_content();?>
+					<a class="blue-cta" href="#">Book me</a>
+				</div>
 			</div>
-			<div class="event-featured-content">
-				<?php the_content();?>
-				<a class="blue-cta" href="#">Book me</a>
-			</div>
-		</div>
-		<div class="event-content">
-			<div class="event-listing">
-				<ul>
-					<?php
-						$args = array (
-							'post_type'=>'upcoming-events',
-							'posts_per_page' => 20,
-							'order' => 'ASC',
-							'orderby' => 'meta_value',
-							'meta_key' => 'date'
-						);
+			<div class="event-content">
+				<div class="event-listing">
+					<ul>
+						<?php
+							$args = array (
+								'post_type'=>'upcoming-events',
+								'posts_per_page' => 20,
+								'order' => 'ASC',
+								'orderby' => 'meta_value',
+								'meta_key' => 'date'
+							);
 
-						$query = new WP_Query($args);
-					 ?>
+							$query = new WP_Query($args);
+						 ?>
 
-					<?php
-					if($query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
-						<li class="event">
-							<div class="event-date">
-								<div class="event-month">
-									<?php
-									$date_str = get_field('date');
-									echo date('M', $date_str);
-									?>
+						<?php
+						if($query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
+							<li class="event">
+								<div class="event-date">
+									<div class="event-month">
+										<?php
+										$date_str = get_field('date');
+										echo date('M', $date_str);
+										?>
+									</div>
+									<div class="event-day">
+										<?php
+										$date_str = get_field('date');
+										echo date('j', $date_str);
+										?>
+									</div>
 								</div>
-								<div class="event-day">
-									<?php
-									$date_str = get_field('date');
-									echo date('j', $date_str);
-									?>
+								<div class="event-details">
+									<div class="event-name"><h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3></div>
+									<div class="location"><?php the_field('state'); ?></div>
+									<div class="time">@ <?php the_field('time'); ?></div>
+									<a href="<?php the_permalink(); ?>">
+										<div class="event-btn">Event Details</div>
+									</a>
 								</div>
-							</div>
-							<div class="event-details">
-								<div class="event-name"><h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3></div>
-								<div class="location"><?php the_field('state'); ?></div>
-								<div class="time">@ <?php the_field('time'); ?></div>
-								<a href="<?php the_permalink(); ?>">
-									<div class="event-btn">Event Details</div>
-								</a>
-							</div>
-						</li>
-					<?php endwhile; endif; wp_reset_postdata(); ?>
-				</ul>
+							</li>
+						<?php endwhile; endif; wp_reset_postdata(); ?>
+					</ul>
+				</div>
+				<div class="video-archive">
+					<?php the_content();?>
+				</div>
 			</div>
-			<div class="video-archive">
-				<?php the_content();?>
-			</div>
-		</div>
+		</div><!-- .wrap -->
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
