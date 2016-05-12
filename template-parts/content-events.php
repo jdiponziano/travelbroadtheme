@@ -46,10 +46,14 @@
 									<?php
 									$date_str = get_field('date');
 									echo date('M', $date_str);
-										//echo the_field('date');
 									?>
 								</div>
-								<div class="event-day">12</div>
+								<div class="event-day">
+									<?php
+									$date_str = get_field('date');
+									echo date('j', $date_str);
+									?>
+								</div>
 							</div>
 							<div class="event-details">
 								<div class="event-name"><h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3></div>

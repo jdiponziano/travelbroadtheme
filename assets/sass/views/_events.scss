@@ -1,6 +1,6 @@
 .page-template-page-events {
   .event-intro {
-    @include row(block);
+    @include row();
     .event-featured-video {
       @include span-columns(6);
     }
@@ -9,7 +9,7 @@
     }
   }
   .event-content {
-    @include row(block);
+    @include row();
     .event-listing {
       @include span-columns(4);
     }
