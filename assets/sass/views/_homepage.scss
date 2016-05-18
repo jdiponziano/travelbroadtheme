@@ -83,6 +83,16 @@
 
   .wrap > div {
     @include clearfix;
+    .event-listing {
+      @include span-columns(12);@include media($tablet-portrait) {
+        @include span-columns(4);
+      }
+    }
+    .event-video {
+      @include span-columns(12);@include media($tablet-portrait) {
+        @include span-columns(8);
+      }
+    }
   }
 }
 

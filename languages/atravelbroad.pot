@@ -152,7 +152,7 @@ msgstr ""
 msgid "Tagged %1$s"
 msgstr ""
 
-#: inc/template-tags.php:65, template-parts/content-events.php:59, template-parts/content-gallery.php:43, template-parts/content-page.php:33, template-parts/content-photos.php:41
+#: inc/template-tags.php:65, template-parts/content-events.php:94, template-parts/content-gallery.php:48, template-parts/content-page.php:33, template-parts/content-photos.php:41
 msgid "Edit %s"
 msgstr ""
 
