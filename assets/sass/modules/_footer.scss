@@ -6,7 +6,6 @@
   background-color: map_get($primary-colors, 'blue');
   @include padding (3em null);
   color: map_get($primary-colors, 'white');
-  margin-top: -20px;
 
   .footer-widget-left,
   .footer-widget-right,
