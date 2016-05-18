@@ -11,28 +11,33 @@
 
 <article <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		<div class="title-bg">
+			<div class="wrap">
+				<?php the_title( '<h1 class="entry-title alignright">', '</h1>' ); ?>
+			</div>
+		</div>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
+		<div class="wrap">
+			<?php
+				$args = array (
+					'post_type'=>'travel-photos'
+				);
 
-		<?php
-			$args = array (
-				'post_type'=>'travel-photos'
-			);
+				$query = new WP_Query($args);
+			 ?>
 
-			$query = new WP_Query($args);
-		 ?>
-
-		<?php
-		if($query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
-			<div class="gallery-item">
-				<a href="<?php the_permalink(); ?>">
-					<div class="galley-feature"><?php the_post_thumbnail('large'); ?></div>
-					<?php the_title( '<h2 class="gallery-title">', '</h2>' ); ?>
-				</a>
-			</div>
-		<?php endwhile; endif; wp_reset_postdata(); ?>
+			<?php
+			if($query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
+				<div class="gallery-item">
+					<a href="<?php the_permalink(); ?>">
+						<div class="galley-feature"><?php the_post_thumbnail('large'); ?></div>
+						<?php the_title( '<h2 class="gallery-title">', '</h2>' ); ?>
+					</a>
+				</div>
+			<?php endwhile; endif; wp_reset_postdata(); ?>
+		</div>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
