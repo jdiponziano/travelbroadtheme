@@ -11,16 +11,32 @@
 
 <article <?php post_class(); ?>>
 	<header class="entry-header gallery-name">
+		<div class="wrap">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 		<?php previous_post_link('%', '<i class="fa fa-chevron-left" aria-hidden="true"></i>', 'no'); ?>
 		<a href="<?php bloginfo('url');?>/gallery"><i class="fa fa-th" aria-hidden="false"></i></a>
 		<?php next_post_link(); ?>
 		<hr />
+	</div>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
 		<div class="gallery-photos">
-			<?php the_field('photos'); ?>
+			<?php
+				$images = get_field('gallery');
+
+				if( $images ): ?>
+				    <ul>
+				        <?php foreach( $images as $image ): ?>
+				            <li>
+				                <a href="<?php echo $image['url']; ?>">
+				                     <img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>" />
+				                </a>
+				                <p><?php echo $image['caption']; ?></p>
+				            </li>
+				        <?php endforeach; ?>
+				    </ul>
+				<?php endif; ?>
 		</div>
 		<div class="gallery-details">
 			<p><?php the_field('gallery_description'); ?></p>

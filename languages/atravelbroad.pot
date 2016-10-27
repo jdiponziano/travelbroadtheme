@@ -152,7 +152,7 @@ msgstr ""
 msgid "Tagged %1$s"
 msgstr ""
 
-#: inc/template-tags.php:65, template-parts/content-events.php:94, template-parts/content-gallery.php:48, template-parts/content-page.php:33, template-parts/content-photos.php:41
+#: inc/template-tags.php:65, template-parts/content-events.php:94, template-parts/content-gallery.php:48, template-parts/content-page.php:37, template-parts/content-photos.php:43
 msgid "Edit %s"
 msgstr ""
 
@@ -181,11 +181,11 @@ msgstr ""
 msgid "Submit"
 msgstr ""
 
-#: template-parts/content-blog.php:40, template-parts/content.php:36
+#: template-parts/content-blog.php:40, template-parts/content.php:38
 msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: template-parts/content-blog.php:46, template-parts/content-page.php:22, template-parts/content.php:41
+#: template-parts/content-blog.php:46, template-parts/content-page.php:25, template-parts/content.php:43
 msgid "Pages:"
 msgstr ""
 

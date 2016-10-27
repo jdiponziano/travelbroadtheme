@@ -11,6 +11,7 @@
 
 <article <?php post_class(); ?>>
 	<header class="entry-header">
+		<div class="wrap">
 		<?php
 			if ( is_single() ) {
 				the_title( '<h1 class="entry-title">', '</h1>' );
@@ -24,6 +25,7 @@
 		</div><!-- .entry-meta -->
 		<?php
 		endif; ?>
+	</div>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">

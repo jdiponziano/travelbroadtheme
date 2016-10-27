@@ -22,7 +22,7 @@
 		<div class="wrap">
 			<?php
 				$args = array (
-					'post_type'=>'travel-photos'
+					'post_type'=>'gallery'
 				);
 
 				$query = new WP_Query($args);
