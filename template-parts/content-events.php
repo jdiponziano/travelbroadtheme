@@ -27,7 +27,6 @@
 					<div class="video">
 						<div class="video-wrapper">
 							<?php the_field('featured_video'); ?>
-								<!-- <iframe src="https://www.youtube.com/embed/PU5QCoYbw-A" frameborder="0" allowfullscreen></iframe> -->
 						</div>
 					</div>
 				</div>
@@ -42,7 +41,7 @@
 						<?php
 							$args = array (
 								'post_type'=>'events_schedule',
-								'posts_per_page' => 20,
+								'posts_per_page' => 15,
 								'order' => 'ASC',
 								'orderby' => 'meta_value',
 								'meta_key' => 'date'
@@ -80,7 +79,26 @@
 					</ul>
 				</div>
 				<div class="video-archive">
-					<?php the_content();?>
+					<h2><?php the_field('archive_header');?></h2>
+					<?php
+						$args = array (
+							'post_type'=>'event_videos',
+							'posts_per_page' => 6,
+							'order' => 'ASC',
+							'orderby' => 'date',
+						);
+
+						$query = new WP_Query($args);
+					 ?>
+					 <?php
+					if($query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
+					<div class="video-item">
+						<div class="video-wrapper">
+							<?php the_field('video'); ?>
+						</div>
+						<h3><?php the_title(); ?></h3>
+					</div>
+					<?php endwhile; endif; wp_reset_postdata(); ?>
 				</div>
 			</div>
 		</div><!-- .wrap -->

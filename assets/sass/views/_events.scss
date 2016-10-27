@@ -3,14 +3,23 @@
     @include row();
     margin-bottom: em(40px);
     @include padding(10px 0 10px 7px);
+
     .event-featured-video {
-      @include span-columns(6);
+      @include span-columns(12);
+      margin-bottom: 1em;
+      @include media($tablet-portrait) {
+        @include span-columns(6);
+      }
       .video {
         box-shadow: -7px 7px map-get($primary-colors, 'blue');;
       }
     }
+
     .event-featured-content {
-      @include span-columns(6);
+      @include span-columns(12);
+      @include media($tablet-portrait) {
+        @include span-columns(6);
+      }
       a {
         float: right;
       }
@@ -22,12 +31,30 @@
   .event-content {
     @include row();
     .event-listing {
-      @include span-columns(4);
+      @include span-columns(12);
+      margin-bottom: 1em;
       @include pad();
       background-color: $color-gallery;
+      @include media($tablet-portrait) {
+        @include span-columns(4);
+      }
     }
     .video-archive {
-      @include span-columns(8);
+      @include span-columns(12);
+      @include media($tablet-portrait) {
+        @include span-columns(8);
+      }
+      h2 {
+        margin-top: 0;
+      }
+      .video-item {
+        @include span-columns(12);
+        @include pad();
+        @include media($tablet-portrait) {
+          @include span-columns(6);
+          margin-right: 0;
+        }
+      }
     }
   }
 }
