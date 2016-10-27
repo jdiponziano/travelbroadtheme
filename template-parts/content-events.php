@@ -26,7 +26,8 @@
 				<div class="event-featured-video">
 					<div class="video">
 						<div class="video-wrapper">
-								<iframe src="https://www.youtube.com/embed/PU5QCoYbw-A" frameborder="0" allowfullscreen></iframe>
+							<?php the_field('featured_video'); ?>
+								<!-- <iframe src="https://www.youtube.com/embed/PU5QCoYbw-A" frameborder="0" allowfullscreen></iframe> -->
 						</div>
 					</div>
 				</div>
@@ -40,7 +41,7 @@
 					<ul>
 						<?php
 							$args = array (
-								'post_type'=>'upcoming-events',
+								'post_type'=>'events_schedule',
 								'posts_per_page' => 20,
 								'order' => 'ASC',
 								'orderby' => 'meta_value',
@@ -49,27 +50,26 @@
 
 							$query = new WP_Query($args);
 						 ?>
-
-						<?php
+						 <?php
 						if($query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
 							<li class="event">
 								<div class="event-date">
 									<div class="event-month">
 										<?php
-										$date_str = get_field('date');
-										echo date('M', $date_str);
+											$date = new DateTime(get_field('date', false, false));
+											echo $date->format('M');
 										?>
 									</div>
 									<div class="event-day">
 										<?php
-										$date_str = get_field('date');
-										echo date('j', $date_str);
+											$date = new DateTime(get_field('date', false, false));
+											echo $date->format('j');
 										?>
 									</div>
 								</div>
 								<div class="event-details">
 									<div class="event-name"><h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3></div>
-									<div class="location"><?php the_field('state'); ?></div>
+									<div class="location"><?php the_field('location'); ?></div>
 									<div class="time">@ <?php the_field('time'); ?></div>
 									<a href="<?php the_permalink(); ?>">
 										<div class="event-btn">Event Details</div>
