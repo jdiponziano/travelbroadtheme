@@ -1,12 +1,25 @@
 .gallery-item {
   @include span-columns(4);
+  padding: .5em;
+  margin-right: 0;
 
-  .gallery-feature {
-    max-height: 200px;
-  }
+  .gallery-img {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
 
-  .gallery-title {
-    margin-top: 0;
+    .gallery-feature > img {
+      position: relative;
+      left: 50%;
+      top: 50%;
+      height: 100%;
+      width: auto;
+      -webkit-transform: translate(-50%,-50%);
+          -ms-transform: translate(-50%,-50%);
+              transform: translate(-50%,-50%);
+
+    }
   }
 }
 
