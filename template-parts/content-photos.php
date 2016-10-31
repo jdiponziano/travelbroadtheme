@@ -28,7 +28,7 @@
 				if( $images ): ?>
 				    <ul>
 				        <?php foreach( $images as $image ): ?>
-				            <li>
+				            <li class="photo-single">
 				                <a href="<?php echo $image['url']; ?>">
 				                     <img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>" />
 				                </a>
