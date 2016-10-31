@@ -42,7 +42,7 @@ get_header(); ?>
           				<ul>
           					<?php
           						$args = array (
-          							'post_type'=>'upcoming-events',
+          							'post_type'=>'upcoming_events',
           							'posts_per_page' => 3,
           							'order' => 'ASC',
           							'orderby' => 'meta_value',
@@ -56,19 +56,19 @@ get_header(); ?>
           					if($query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
           						<li class="event">
                         <div class="event-date">
-          								<div class="event-month">
-          									<?php
-          									$date_str = get_field('date');
-          									echo date('M', $date_str);
-          									?>
-          								</div>
-          								<div class="event-day">
-          									<?php
-          									$date_str = get_field('date');
-          									echo date('j', $date_str);
-          									?>
-          								</div>
-          							</div>
+        									<div class="event-month">
+        										<?php
+        											$date = new DateTime(get_field('date', false, false));
+        											echo $date->format('M');
+        										?>
+        									</div>
+        									<div class="event-day">
+        										<?php
+        											$date = new DateTime(get_field('date', false, false));
+        											echo $date->format('j');
+        										?>
+        									</div>
+        								</div>
           							<div class="event-details">
           								<div class="event-name"><h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3></div>
           								<div class="location"><?php the_field('state'); ?></div>
