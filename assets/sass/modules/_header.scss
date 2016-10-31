@@ -6,11 +6,16 @@
 	background-color: map_get($primary-colors, 'purple');
 	border-bottom: 4px solid map_get($primary-colors, 'green');
 	color: $color-light-yellow;
+	text-align: center;
 
 	.wrap {
 
 		.site-branding {
-			@include span-columns(4);
+			@include span-columns(12);
+			@include media ($tablet-portrait) {
+				@include span-columns(4);
+				text-align: left;
+			}
 
 			.site-title {
 				font-size: rem(26);
