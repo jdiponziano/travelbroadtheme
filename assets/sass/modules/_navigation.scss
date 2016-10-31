@@ -43,11 +43,15 @@
 
 // Main navigation container
 .main-navigation {
-	@include span-columns(8);
+	@include span-columns(12);
+	margin-top: .7em;
 	font-family: $font-heading;
 	font-size: rem(26);
 	display: block;
 	float: left;
+	@include media($tablet-portrait) {
+		@include span-columns(8);
+	}
 
 	// Menu area
 	ul {
