@@ -33,7 +33,7 @@
 	<div class="entry-content">
 		<?php
 		if ( has_post_thumbnail() ) {
-				the_post_thumbnail();
+				the_post_thumbnail('blog-thumb');
 		}
 			the_excerpt( sprintf(
 				/* translators: %s: Name of current post. */

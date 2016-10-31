@@ -165,5 +165,5 @@ require get_template_directory() . '/inc/scripts.php';
 add_action( 'after_setup_theme', 'atb_add_image_sizes' );
 function atb_add_image_sizes() {
     add_image_size('galleryImageCropped', 300, 300, true);
-    add_image_size( 'blog-thumb', 9999, 300, true ); // (cropped)
+    add_image_size( 'blog-thumb', 1024, 400, true );
 }
