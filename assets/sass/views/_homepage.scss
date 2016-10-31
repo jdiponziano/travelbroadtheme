@@ -190,7 +190,10 @@
 
     h2 {
       color: map_get($primary-colors, 'white');
-      font-size: em(48px);
+      font-size: 2em;
+      @include media($tablet-portrait) {
+        font-size: em(48px);
+      }
     }
 
     p {
