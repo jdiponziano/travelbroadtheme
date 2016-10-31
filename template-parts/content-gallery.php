@@ -29,12 +29,10 @@
 			 ?>
 			<?php
 			if($query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
-				<div class="gallery-item">
+				<div class="gallery-piece">
 					<a href="<?php the_permalink(); ?>">
 						<div class="gallery-img">
-							<div class="gallery-feature">
-								<?php the_post_thumbnail('large'); ?>
-							</div>
+							<?php the_post_thumbnail('galleryImageCropped'); ?>
 						</div>
 						<?php the_title( '<h2 class="gallery-title">', '</h2>' ); ?>
 					</a>
