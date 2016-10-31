@@ -114,13 +114,13 @@ get_header(); ?>
               <div class="card">
                 <a href="<?php the_permalink(); ?>">
                   <div class="card-image">
-                    <img src="<?php the_post_thumbnail_url(); ?>" alt="">
+                    <?php the_post_thumbnail('home-thumb'); ?>
                   </div>
                   <div class="card-header">
                     <?php the_title(); ?>
                   </div>
                   <div class="card-copy">
-                    <p><?php the_excerpt(); ?></p>
+                    <?php the_excerpt(); ?>
                   </div>
                 </a>
               </div>
