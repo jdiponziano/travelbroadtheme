@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Left Sidebar
+ * Template Name: Right Sidebar
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
@@ -9,15 +9,14 @@
 
 get_header(); ?>
 
-	<div class="wrap">
 
-		<div class="primary content-area">
+		<div class="content-area">
 			<main id="main" class="site-main" role="main">
 
 				<?php
 				while ( have_posts() ) : the_post();
 
-					get_template_part( 'template-parts/content', 'page' );
+					get_template_part( 'template-parts/content', 'page-sidebar-right' );
 
 					// If comments are open or we have at least one comment, load up the comment template.
 					if ( comments_open() || get_comments_number() ) :
@@ -29,9 +28,5 @@ get_header(); ?>
 
 			</main><!-- #main -->
 		</div><!-- .primary -->
-<?php get_sidebar('page'); ?>
-
-
-	</div><!-- .wrap -->
 
 <?php get_footer(); ?>
