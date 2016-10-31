@@ -1,31 +1,25 @@
-.gallery-item {
-  @include span-columns(4);
-  padding: .5em;
+.gallery-piece {
+  @include span-columns(12);
   margin-right: 0;
-
-  .gallery-img {
-    position: relative;
-    width: 100%;
-    height: 300px;
-    overflow: hidden;
-
-    .gallery-feature > img {
-      position: relative;
-      left: 50%;
-      top: 50%;
-      height: 100%;
-      width: auto;
-      -webkit-transform: translate(-50%,-50%);
-          -ms-transform: translate(-50%,-50%);
-              transform: translate(-50%,-50%);
-
-    }
+  display: inline-block;
+	text-align: center;
+	vertical-align: top;
+  @include media($phone-landscape) {
+    @include span-columns(6);
+    margin-right: 0;
+  }
+  @include media($tablet-landscape) {
+    @include span-columns(4);
+      margin-right: 0;
   }
 }
 
 .gallery-photos {
   @include clearfix;
   @include span-columns(8);
+  .photo-single {
+    @include span-columns(4);
+  }
 }
 
 .gallery-details {
