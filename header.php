@@ -53,7 +53,7 @@
 				<?php
 					wp_nav_menu( array(
 						'theme_location' => 'primary',
-						'menu_class'     => 'primary-menu menu dropdown'
+						'menu_class'     => 'primary-menu menu horizontal dropdown'
 					) );
 				?>
 			</nav><!-- #site-navigation -->

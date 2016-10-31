@@ -21,6 +21,8 @@
 // Navicon menu
 .menu-toggle {
 	display: block;
+	text-align: center;
+	width: 100%;
 
 	.icon {
 		@include size(rem(12) rem(14));
@@ -36,7 +38,7 @@
 		vertical-align: middle;
 	}
 
-	@include media($phone-landscape) {
+	@include media($tablet-portrait) {
 		display: none;
 	}
 }
@@ -58,7 +60,7 @@
 		display: none;
 		float: right;
 
-		@include media($phone-landscape) {
+		@include media($tablet-portrait) {
 			display: block;
 		}
 	}
@@ -119,7 +121,7 @@
 
 			// Sub-menu items
 			li {
-
+				
 				&:hover > ul,
 				&.focus > ul {
 					left: 100%;
