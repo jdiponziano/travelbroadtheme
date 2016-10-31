@@ -156,3 +156,9 @@ require get_template_directory() . '/inc/jetpack.php';
  * Load styles and scripts.
  */
 require get_template_directory() . '/inc/scripts.php';
+
+
+/**
+ * Crop Images Sizes.
+ */
+ add_image_size('galleryImageCropped', 300, 300, true);
