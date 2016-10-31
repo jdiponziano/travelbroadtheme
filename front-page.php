@@ -112,15 +112,17 @@ get_header(); ?>
             <?php
             if($query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
               <div class="card">
-                <div class="card-image">
-                  <img src="<?php the_post_thumbnail_url(); ?>" alt="">
-                </div>
-                <div class="card-header">
-                  <?php the_title(); ?>
-                </div>
-                <div class="card-copy">
-                  <p><?php the_excerpt(); ?></p>
-                </div>
+                <a href="<?php the_permalink(); ?>">
+                  <div class="card-image">
+                    <img src="<?php the_post_thumbnail_url(); ?>" alt="">
+                  </div>
+                  <div class="card-header">
+                    <?php the_title(); ?>
+                  </div>
+                  <div class="card-copy">
+                    <p><?php the_excerpt(); ?></p>
+                  </div>
+                </a>
               </div>
             <?php endwhile; endif; wp_reset_postdata(); ?>
 
