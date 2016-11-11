@@ -20,6 +20,7 @@
   @include media($tablet-landscape) {
     @include span-columns(4);
       margin-right: 0;
+      float: left;
   }
 }
 
@@ -28,6 +29,7 @@
   @include span-columns(8);
   .photo-single {
     @include span-columns(4);
+    margin-right: 0;
   }
 }
 
