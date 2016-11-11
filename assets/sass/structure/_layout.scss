@@ -45,3 +45,26 @@
 		@include span-columns(4);
 	}
 }
+
+.page-template-page-sidebar-left {
+	.primary {
+		@include fill-parent;
+
+		@include media($tablet-landscape) {
+			@include span-columns(8);
+			float: right;
+			margin-left: 1.25%;
+			margin-right: 0;
+		}
+	}
+
+	.secondary {
+		@include fill-parent;
+
+		@include media($tablet-landscape) {
+			@include span-columns(4);
+			float: left;
+			margin-right: 0;
+		}
+	}
+}

@@ -18,7 +18,6 @@
 		</div>
 	</header><!-- .entry-header -->
 	<div class="wrap">
-		<?php get_sidebar('page'); ?>
 		<div class="primary">
 				<div class="entry-content">
 					<?php
@@ -45,4 +44,5 @@
 				?>
 			</footer><!-- .entry-footer -->
 	</div>
+	<?php get_sidebar('page'); ?>
 </article><!-- #post-## -->
