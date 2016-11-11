@@ -61,4 +61,14 @@ footer.site-footer {
       }
     }
   }
+
+  .site-made {
+    @include span-columns(12);
+    p {
+      text-align: center;
+      a {
+        color: $color-light-yellow;
+      }
+    }
+  }
 }
