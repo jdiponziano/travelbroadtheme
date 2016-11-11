@@ -55,8 +55,11 @@ footer.site-footer {
           float: right;
         }
         li {
-          display: inline-block;
+          display: block;
           margin-right: 1em;
+          @include media($tablet-landscape) {
+            display: inline-block;
+          }
         }
       }
     }
