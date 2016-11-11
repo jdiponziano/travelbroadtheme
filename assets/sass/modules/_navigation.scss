@@ -23,6 +23,12 @@
 	display: block;
 	text-align: center;
 	width: 100%;
+	background-color: $color-blue;
+	&:active,
+	&:hover,
+	&:focus {
+		background-color: darken($color-blue, 10%);
+	}
 
 	.icon {
 		@include size(rem(12) rem(14));
@@ -46,27 +52,42 @@
 // Main navigation container
 .main-navigation {
 	@include span-columns(12);
-	margin-top: .7em;
 	font-family: $font-heading;
 	font-size: rem(26);
 	display: block;
 	float: left;
 	@include media($tablet-portrait) {
 		@include span-columns(8);
+		margin-top: .7em;
 	}
 
 	// Menu area
 	ul {
 		display: none;
 		float: right;
-
+		background: $color-whitesmoke;
 		@include media($tablet-portrait) {
 			display: block;
+			background: $color-purple;
 		}
 	}
 
 	&.toggled ul {
 		display: block;
+		width: 100%;
+		@include media($tablet-portrait) {
+			width: auto;
+		}
+		li {
+			display: block;
+			width: 100%;
+			a {
+				color: $color-blue;
+				@include media($tablet-portrait) {
+					color: $color-light-yellow;
+				}
+			}
+		}
 	}
 }
 
@@ -121,7 +142,7 @@
 
 			// Sub-menu items
 			li {
-				
+
 				&:hover > ul,
 				&.focus > ul {
 					left: 100%;
