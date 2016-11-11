@@ -46,6 +46,9 @@ footer.site-footer {
         text-align: center;
         float: right;
       }
+      a {
+        color: $color-light-yellow;
+      }
       ul {
         @include list-reset;
         @include media($tablet-landscape) {
