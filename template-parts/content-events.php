@@ -14,7 +14,7 @@
 
 		<div class="title-bg">
 			<div class="wrap">
-				<?php the_title( '<h1 class="entry-title alignright">', '</h1>' ); ?>
+				<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 			</div>
 		</div>
 

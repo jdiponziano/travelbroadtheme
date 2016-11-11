@@ -7,13 +7,27 @@
     height: em(150px);
     @include padding(4em null 1em);
     .title-bg {
-      background-color: $color-blue-transparent;
+      .wrap {
+        text-align: center;
+        @include media($tablet-portrait) {
+          text-align: right;
+        }
+      }
+      background-color: none;
+      @include media($tablet-portrait) {
+        background-color: $color-blue-transparent;
+      }
       h1 {
         color: map-get($primary-colors, 'white');
         font-size: 5em;
         margin-top: -50px;
         margin-bottom: -45px;
         font-weight: normal;
+        text-shadow: 2px 2px 10px #000;
+        @include media($tablet-portrait) {
+          text-shadow: 2px 2px #000;
+          float: right;
+        }
       }
     }
   }
