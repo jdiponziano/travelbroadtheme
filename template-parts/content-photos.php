@@ -39,8 +39,8 @@
 				<?php endif; ?>
 		</div>
 		<div class="gallery-details">
-			<p><?php the_field('gallery_description'); ?></p>
-			<ul>
+			<?php the_field('gallery_description'); ?>
+			<ul class="gallery-stats">
 				<li>Place: <?php the_field('place'); ?></li>
 				<li>Camera: <?php the_field('camera'); ?></li>
 				<li>Year: <?php the_field('year'); ?></li>
