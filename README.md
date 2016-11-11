@@ -1,8 +1,6 @@
 [![Stories in Ready](https://badge.waffle.io/WebDevStudios/wd_s.png?label=ready&title=Ready)](https://waffle.io/WebDevStudios/wd_s)
 
-# wd_s
-
-This is [WebDevStudios](http://webdevstudios.com) fork of Automattic's [_s](https://github.com/Automattic/_s). wd_s is used as a theme boilerplate for new projects. It contains modern build tools to help developers spin up a bare bones theme quickly. To get started, see the instructions below. As always, your pull requests are welcome!
+Theme created using Automattic's [_s](https://github.com/Automattic/_s). wd_s theme boilerplate. To get started, see the instructions below.
 
 # Features
 
@@ -86,4 +84,3 @@ See [Gruntfile.js](https://github.com/WebDevStudios/wd_s/blob/master/Gruntfile.j
 # Contributing and Support
 
 Your contributions and [support tickets](https://github.com/WebDevStudios/wd_s/issues) are welcome. Please see our [guidelines](https://github.com/WebDevStudios/wd_s/blob/master/CONTRIBUTING.md) before submitting a pull request.
-
