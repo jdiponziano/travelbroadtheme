@@ -1,3 +1,12 @@
+.photo-block {
+  margin-top: em(28px);
+  margin-bottom: em(24.12px);
+  .fa-th {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+
 .gallery-piece {
   @include span-columns(12);
   margin-right: 0;
@@ -36,4 +45,12 @@
     background-color: $color-alto;
     padding: 5px;
   }
+}
+
+.gallery-stats {
+  border-top: 5px solid $color-blue;
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+  padding-top: em(10px);
 }

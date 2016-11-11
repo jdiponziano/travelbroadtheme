@@ -13,9 +13,7 @@
 	<header class="entry-header gallery-name">
 		<div class="wrap">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-		<?php previous_post_link('%', '<i class="fa fa-chevron-left" aria-hidden="true"></i>', 'no'); ?>
-		<a href="<?php bloginfo('url');?>/gallery"><i class="fa fa-th" aria-hidden="false"></i></a>
-		<?php next_post_link(); ?>
+		<a class="alignright photo-block" href="<?php bloginfo('url');?>/gallery"><i class="fa fa-th" aria-hidden="false"></i></a>
 		<hr />
 	</div>
 	</header><!-- .entry-header -->
