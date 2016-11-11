@@ -40,6 +40,11 @@
 				</ul>
 			</div>
 		</div><!-- .wrap -->
+		<div class="site-made">
+			<p>
+				<a href="http://www.jessicadiponziano.com">Website made by: Jessica DiPonziano</a>
+			</p>
+		</div>
 	</footer><!-- .site-footer -->
 </div><!-- #page -->
 
